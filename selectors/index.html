@@ -50,18 +50,39 @@
       <li>list item</li>
       <li>list item</li>
       <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
 
     </ul>
+    <input type="button" value="Button 1"/>
+    <input type="submit" value="Submit"/>
+    <input type="text">
 
+    <a href="https://google.com">Google</a>
+    <a href="https://bing.com/bingers">Bingify</a>
+
+    <div id="log"></div>
   </div>
 
   <script>
     // $('h1#heading1').hide();
     // $('.heading2').hide();
-    $('p span').css('color', 'red');
+    // $('p span').css('color', 'red');
 
     // $('#list li:first').css('color','green');
-    $('ul#list li:even').css('font-size','30px');
+    // $('ul#list li:even').css('font-size','30px');
+    $('ul#list li:nth-child(2n)').css('list-style','none')
+    $(':text').hide();
+    // $('[href]').css('color', 'red');
+    $('a[href="https://google.com"]').css('font-size', '100px');
+    $('input[type="button"]').click((e) => {
+      $('#log').html("clicked: " + event.target.nodeName);
+    });
+    // $('*').hide();
+    $(document).ready(() => {
+      alert('website is fully loaded and ready to be viewed by u my lord.')
+    })
 
 
   </script>
